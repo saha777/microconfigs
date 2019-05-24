@@ -8,7 +8,7 @@ eureka:
 
 prop:
   user:
-    defaultname: userdefname
+    defaultname: username
 
 ---
 spring:

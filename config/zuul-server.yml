@@ -1,0 +1,28 @@
+server:
+  port: 8921
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+zuul:
+  routes:
+    hi:
+      path: /lets/**
+      serviceId: greetings-service
+
+---
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8061/eureka/

@@ -14,9 +14,9 @@ management:
 
 zuul:
   routes:
-    hi:
-      path: /lets/**
-      serviceId: greetings-service
+    webapi:
+      path: /api/**
+      serviceId: webapi-service
 
 ---
 spring:
